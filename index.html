@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Bihari</title>
+  
+  <link rel="icon" type="image/png" href="https://iili.io/nnsMFLu.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --bg-color: #0f0a17;
+      --card-bg: #181024;
+      --primary: #a855f7;
+      --btn-bg: #221636;
+      --btn-hover: #311c52;
+      --text-main: #f3e8ff;
+      --text-muted: #c0a5e8;
+      --border: #3b2361;
+      --shadow: rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 16px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      width: 100%;
+      max-width: 650px;
+      padding: 32px 20px;
+      text-align: center;
+      box-shadow: 0 16px 40px var(--shadow);
+    }
+
+    .profile-img-container {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 16px;
+    }
+
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+      padding: 3px;
+      background: var(--card-bg);
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    p.subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background-color: var(--btn-bg);
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid var(--border);
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+
+    .link-btn i {
+      font-size: 1.15rem;
+      width: 26px;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .link-btn:hover {
+      background-color: var(--btn-hover);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .link-btn span {
+      flex-grow: 1;
+      text-align: left;
+    }
+
+    .link-btn i.fa-chevron-right {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 600px) {
+      .card {
+        padding: 40px 28px;
+      }
+
+      .profile-img-container {
+        width: 110px;
+        height: 110px;
+      }
+
+      h1 {
+        font-size: 1.85rem;
+      }
+
+      .links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .link-btn {
+        padding: 16px 18px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="profile-img-container">
+      <img src="https://iili.io/nnsMFLu.png" alt="Profile Picture" class="profile-img" />
+    </div>
+
+    <h1>BihariBoy</h1>
+    <p class="subtitle">Minecraft PvPer (i can actually pvp)</p>
+
+    <div class="links">
+      <a href="https://youtube.com/@evilplayers_999" target="_blank" class="link-btn">
+        <i class="fa-brands fa-youtube"></i>
+        <span>YouTube Channel</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+
+      <a href="https://discord.com/users/1318236299005788232" target="_blank" class="link-btn">
+        <i class="fa-brands fa-discord"></i>
+        <span>Discord Profile</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+
+      <a href="https://dc.gg/moonlightsmp" target="_blank" class="link-btn">
+        <i class="fa-solid fa-server"></i>
+        <span>Discord Server (Moonlight SMP)</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+
+      <a href="https://namemc.com/profile/BihariBoyXD.1" target="_blank" class="link-btn">
+        <i class="fa-solid fa-cube"></i>
+        <span>Minecraft Profile (NameMC)</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
