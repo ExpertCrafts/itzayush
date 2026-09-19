@@ -14,15 +14,16 @@
 
   <style>
     :root {
-      --bg-color: #0f0a17;
-      --card-bg: #181024;
       --primary: #a855f7;
-      --btn-bg: #221636;
-      --btn-hover: #311c52;
       --text-main: #f3e8ff;
       --text-muted: #c0a5e8;
-      --border: #3b2361;
-      --shadow: rgba(0, 0, 0, 0.4);
+      
+      /* Glassmorphism Styles */
+      --card-bg: rgba(24, 16, 36, 0.45);
+      --btn-bg: rgba(34, 22, 54, 0.55);
+      --btn-hover: rgba(49, 28, 82, 0.75);
+      --border: rgba(168, 85, 247, 0.25);
+      --shadow: rgba(0, 0, 0, 0.5);
     }
 
     * {
@@ -33,7 +34,9 @@
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: var(--bg-color);
+      /* Background setup with full cover */
+      background: url('https://iili.io/nITK7Wb.png') no-repeat center center fixed;
+      background-size: cover;
       color: var(--text-main);
       display: flex;
       justify-content: center;
@@ -42,8 +45,11 @@
       padding: 16px;
     }
 
+    /* Main Card Container with Glass Blur Effect */
     .card {
       background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--border);
       border-radius: 24px;
       width: 100%;
@@ -60,6 +66,7 @@
       margin: 0 auto 16px;
     }
 
+    /* PFP without blur effect */
     .profile-img {
       width: 100%;
       height: 100%;
@@ -67,7 +74,7 @@
       object-fit: cover;
       border: 3px solid var(--primary);
       padding: 3px;
-      background: var(--card-bg);
+      background: transparent;
     }
 
     h1 {
@@ -75,6 +82,7 @@
       font-weight: 700;
       color: var(--text-main);
       margin-bottom: 4px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     p.subtitle {
@@ -82,6 +90,7 @@
       color: var(--text-muted);
       font-weight: 600;
       margin-bottom: 24px;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     }
 
     .links {
@@ -91,6 +100,7 @@
       width: 100%;
     }
 
+    /* Transparent & Blurred Link Buttons */
     .link-btn {
       display: flex;
       align-items: center;
@@ -98,6 +108,8 @@
       padding: 14px 16px;
       border-radius: 14px;
       background-color: var(--btn-bg);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       color: var(--text-main);
       text-decoration: none;
       font-weight: 600;
@@ -118,6 +130,7 @@
       background-color: var(--btn-hover);
       border-color: var(--primary);
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .link-btn span {
